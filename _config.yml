@@ -4,3 +4,6 @@ url: ""
 baseurl: ""
 
 markdown: kramdown
+
+exclude:
+  - README.md

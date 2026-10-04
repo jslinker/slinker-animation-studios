@@ -1,0 +1,29 @@
+featured_video_url: "https://www.youtube.com/watch?v=0mwYbSMW2mw"
+
+projects_intro: "Animation, illustration, mobile apps, manufacturing, and crowd funding campaigns."
+
+# Replace these placeholder entries as projects are ready to publish. Optional
+# image paths should be site-relative, for example /assets/images/project.jpg.
+projects:
+  - title: "Project Title"
+    description: "Project description goes here. It caps at 3 lines."
+    url: "#projects"
+  - title: "Project Title"
+    description: "Project description goes here. It caps at 3 lines."
+    url: "#projects"
+  - title: "Project Title"
+    description: "Project description goes here. It caps at 3 lines."
+    url: "#projects"
+  - title: "Project Title"
+    description: "Project description goes here. It caps at 3 lines."
+    url: "#projects"
+
+# These cards are shown only until the first Jekyll post is published.
+post_placeholders:
+  - &placeholder
+    title: "Blog post title - limited 2 lines"
+    excerpt: "Blog post preview body. Limited to 10 lines. New History of Animation stories will appear here when they are published."
+    url: "#history-heading"
+  - *placeholder
+  - *placeholder
+  - *placeholder
