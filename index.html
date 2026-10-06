@@ -10,6 +10,12 @@ layout: null
     <meta name="description" content="{{ site.description }}">
     <link rel="icon" type="image/png" href="{{ '/assets/images/slinker-animation-logo.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <meta property="og:title" content="{{ site.title | escape }}">
+    <meta property="og:description" content="Original animation, illustration, and storytelling.">
+    <meta property="og:url" content="{{ '/' | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/images/social/home.png' | absolute_url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ '/assets/images/social/home.png' | absolute_url }}">
   </head>
   <body>
     {% include header.html %}

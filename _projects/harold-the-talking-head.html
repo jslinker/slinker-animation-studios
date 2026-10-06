@@ -5,6 +5,7 @@ date: 2024-10-01
 permalink: /harold-the-talking-head/
 description: A disembodied stand-up comedian, a facial rigging experiment, and a Halloween short film brought back to life.
 image: /assets/images/harold-the-talking-head/homepage-thumbnail.jpg
+social_image: /assets/images/social/harold-the-talking-head.png
 source_url: https://www.slinkeranimation.com/harold-the-talking-head
 ---
 <!doctype html>
@@ -18,7 +19,7 @@ source_url: https://www.slinkeranimation.com/harold-the-talking-head
 <link rel="icon" href="{{ '/assets/images/slinker-animation-logo.png' | relative_url }}">
 <meta property="og:title" content="{{ page.title | escape }}">
 <meta property="og:description" content="{{ page.description | escape }}">
-<meta property="og:image" content="{{ page.image | absolute_url }}">
+<meta property="og:image" content="{{ page.social_image | absolute_url }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/wwdc-pins/fonts.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/wwdc-pins/original-2.css' | relative_url }}">
@@ -29,6 +30,8 @@ source_url: https://www.slinkeranimation.com/harold-the-talking-head
 <link rel="stylesheet" href="{{ '/assets/css/project-gallery.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/global-chrome.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/project-video.css' | relative_url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ page.social_image | absolute_url }}">
 </head>
 <body
     id="collection-69ac9d750347d14745ecce58"
