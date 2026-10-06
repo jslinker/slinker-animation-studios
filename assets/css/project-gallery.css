@@ -1,0 +1,9 @@
+/* Native gallery layout matching the original three-column presentation. */
+.gallery-grid-wrapper { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.75vw; }
+.gallery-grid-item { margin: 0; }
+.gallery-grid-item-wrapper { aspect-ratio: 4 / 3; }
+.gallery-grid-item img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 767px) {
+  .gallery-grid-wrapper { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.gallery-grid .gallery-grid-item .gallery-grid-item-wrapper { opacity: 1 !important; }

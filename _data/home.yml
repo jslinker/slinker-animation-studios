@@ -5,18 +5,27 @@ projects_intro: "Animation, illustration, mobile apps, manufacturing, and crowd 
 # Replace these placeholder entries as projects are ready to publish. Optional
 # image paths should be site-relative, for example /assets/images/project.jpg.
 projects:
-  - title: "Project Title"
-    description: "Project description goes here. It caps at 3 lines."
-    url: "#projects"
-  - title: "Project Title"
-    description: "Project description goes here. It caps at 3 lines."
-    url: "#projects"
-  - title: "Project Title"
-    description: "Project description goes here. It caps at 3 lines."
-    url: "#projects"
-  - title: "Project Title"
-    description: "Project description goes here. It caps at 3 lines."
-    url: "#projects"
+  - title: "WWDC 2020 Enamel Pins"
+    description: "Seven designs celebrating the WWDC community. 662 backers brought them to life."
+    url: "/wwdc-pins/"
+    image: "/assets/images/wwdc-pins/complete-collection.jpg"
+  - title: "I Have to Go Away"
+    description: "A heartfelt story by Faye Carroll, illustrated by Joseph Slinker."
+    url: "/i-have-to-go-away/"
+    image: "/assets/images/i-have-to-go-away/cover.png"
+  - title: "Harold the Talking Head"
+    description: "A headstrong comedian brought back to life in an animated Halloween short."
+    url: "/harold-the-talking-head/"
+    image: "/assets/images/harold-the-talking-head/homepage-thumbnail.jpg"
+  - title: "The Good Chord Book"
+    description: "Chords, scales, and custom tunings for guitar, mandolin, ukulele, and banjo."
+    url: "/the-good-chord-book/"
+    image: "/assets/images/the-good-chord-book/homepage-thumbnail.png"
+
+  - title: "Magic: The Gathering Land Station"
+    description: "250 unique land cards created with fully modeled 3D terrains in Houdini."
+    url: "/magic-the-gathering-land-station/"
+    image: "/assets/images/magic-the-gathering-land-station/final-dessert-render.png"
 
 # These cards are shown only until the first Jekyll post is published.
 post_placeholders:

@@ -12,13 +12,7 @@ layout: null
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   </head>
   <body>
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="Slinker Animation Studios home">
-          <img src="{{ '/assets/images/slinker-animation-logo.png' | relative_url }}" alt="Slinker Animation Studios">
-        </a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <main>
       <section class="hero" aria-label="Featured film">
@@ -38,7 +32,7 @@ layout: null
           <p>{{ site.data.home.projects_intro }}</p>
         </div>
         <div class="project-grid">
-          {% for project in site.data.home.projects limit: 4 %}
+          {% for project in site.data.home.projects %}
             <a class="project-card{% unless project.image %} project-card--placeholder{% endunless %}" href="{{ project.url | relative_url }}"{% if project.image %} style="--project-image: url('{{ project.image | relative_url }}')"{% endif %}>
               <span class="project-card__copy">
                 <strong>{{ project.title }}</strong>
@@ -88,9 +82,6 @@ layout: null
       </section>
     </main>
 
-    <footer class="site-footer">
-      <img src="{{ '/assets/images/thief-sign.png' | relative_url }}" alt="The Slinker Studios thief holding a sign">
-      <p>&copy; Slinker Animation Studios {{ site.time | date: '%Y' }}</p>
-    </footer>
+    {% include footer.html %}
   </body>
 </html>

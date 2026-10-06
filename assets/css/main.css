@@ -1,8 +1,10 @@
+@import url("global-chrome.css");
 @font-face {
   font-family: "Attractype Reborn";
   src: url("../fonts/attractype-reborn.otf") format("opentype");
   font-display: swap;
 }
+
 
 @font-face {
   font-family: "Grand Baron Distressed";
@@ -10,11 +12,13 @@
   font-display: swap;
 }
 
+
 @font-face {
   font-family: "Myona Sans Display";
   src: url("../fonts/myona-sans-display.otf") format("opentype");
   font-display: swap;
 }
+
 
 @font-face {
   font-family: "Toxic Fill";
@@ -22,19 +26,23 @@
   font-display: swap;
 }
 
+
 :root {
   --header-height: 80px;
   --history-bg: #fffaf5;
   --placeholder: #9c9c9c;
 }
 
+
 * {
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
+
 
 body {
   margin: 0;
@@ -43,37 +51,11 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+
 a {
   color: inherit;
 }
 
-.site-header {
-  position: fixed;
-  z-index: 20;
-  inset: 0 0 auto;
-  height: var(--header-height);
-  background: transparent;
-}
-
-.site-header__inner {
-  width: min(1200px, 100%);
-  height: 100%;
-  margin-inline: auto;
-  padding: 16px 8px;
-}
-
-.site-logo {
-  display: block;
-  width: 81px;
-  height: 48px;
-  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.25));
-}
-
-.site-logo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
 
 .hero {
   position: relative;
@@ -81,6 +63,7 @@ a {
   overflow: hidden;
   background: radial-gradient(circle at 14% 16%, #90f4ff 0, #7696ff 100%);
 }
+
 
 .hero__art {
   position: absolute;
@@ -91,6 +74,7 @@ a {
   max-width: none;
   object-fit: contain;
 }
+
 
 .watch-button {
   position: absolute;
@@ -113,16 +97,19 @@ a {
   transition: background-color 160ms ease, transform 160ms ease;
 }
 
+
 .watch-button:hover,
 .watch-button:focus-visible {
   background: #dc0000;
   transform: translateX(-50%) scale(1.035);
 }
 
+
 .watch-button svg {
   flex: 0 0 auto;
   color: #fff;
 }
+
 
 .projects {
   min-height: 634px;
@@ -130,9 +117,11 @@ a {
   background: #fff;
 }
 
+
 .projects__intro {
   text-align: center;
 }
+
 
 .projects h1 {
   width: fit-content;
@@ -147,6 +136,7 @@ a {
   line-height: 1.08;
 }
 
+
 .projects__intro p {
   max-width: 410px;
   margin: 0 auto;
@@ -156,6 +146,7 @@ a {
   line-height: 1;
 }
 
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -163,6 +154,7 @@ a {
   width: min(1512px, 100%);
   margin: 45px auto 0;
 }
+
 
 .project-card {
   position: relative;
@@ -178,6 +170,7 @@ a {
   text-decoration: none;
 }
 
+
 .project-card::after {
   position: absolute;
   inset: 0;
@@ -187,10 +180,12 @@ a {
   transition: opacity 160ms ease;
 }
 
+
 .project-card:hover::after,
 .project-card:focus-visible::after {
   opacity: 1;
 }
+
 
 .project-card__copy {
   position: absolute;
@@ -203,10 +198,12 @@ a {
   line-height: 1.2;
 }
 
+
 .project-card__copy strong,
 .project-card__copy span {
   display: block;
 }
+
 
 .project-card__copy span {
   display: -webkit-box;
@@ -215,12 +212,14 @@ a {
   -webkit-line-clamp: 3;
 }
 
+
 .history {
   height: 532px;
   overflow: hidden;
   padding-top: 55px;
   background: var(--history-bg);
 }
+
 
 .history h2 {
   margin: 0;
@@ -231,9 +230,11 @@ a {
   text-align: center;
 }
 
+
 .history h2 span {
   display: block;
 }
+
 
 .history__scroller {
   overflow-x: auto;
@@ -241,9 +242,11 @@ a {
   scrollbar-width: none;
 }
 
+
 .history__scroller::-webkit-scrollbar {
   display: none;
 }
+
 
 .history__list {
   display: flex;
@@ -251,6 +254,7 @@ a {
   width: max-content;
   margin-inline: auto;
 }
+
 
 .post-card {
   display: block;
@@ -263,6 +267,7 @@ a {
   text-decoration: none;
 }
 
+
 .post-card__image {
   display: block;
   width: 100%;
@@ -271,9 +276,11 @@ a {
   background-size: cover;
 }
 
+
 .post-card__image--placeholder {
   background: var(--placeholder);
 }
+
 
 .post-card strong {
   display: -webkit-box;
@@ -288,6 +295,7 @@ a {
   -webkit-line-clamp: 2;
 }
 
+
 .post-card__excerpt {
   display: -webkit-box;
   padding-top: 1px;
@@ -299,10 +307,12 @@ a {
   -webkit-line-clamp: 10;
 }
 
+
 .about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
 
 .founder {
   position: relative;
@@ -313,6 +323,7 @@ a {
   text-decoration: none;
 }
 
+
 .founder::after {
   position: absolute;
   inset: 0;
@@ -322,10 +333,12 @@ a {
   transition: opacity 160ms ease;
 }
 
+
 .founder:hover::after,
 .founder:focus-visible::after {
   opacity: 1;
 }
+
 
 .founder img {
   display: block;
@@ -333,6 +346,7 @@ a {
   height: 100%;
   object-fit: cover;
 }
+
 
 .founder span {
   position: absolute;
@@ -346,57 +360,37 @@ a {
   text-transform: uppercase;
 }
 
+
 .founder--christopher span {
   font-family: "Toxic Fill", sans-serif;
 }
 
+
 .founder--joseph span {
   font-family: "Myona Sans Display", sans-serif;
 }
-
-.site-footer {
-  position: relative;
-  height: 282px;
-  overflow: hidden;
-  color: #fff;
-  background: #000;
-}
-
-.site-footer img {
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  display: block;
-  width: 473px;
-  height: auto;
-  transform: translateX(-50%);
-}
-
-.site-footer p {
-  position: absolute;
-  bottom: 26px;
-  left: 24px;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 300;
-}
-
 @media (min-width: 1577px) {
+
   .hero__art {
     left: calc(50% - 462px);
   }
-}
 
+
+}
 @media (max-width: 1200px) {
+
   .hero__art {
     left: calc(50% - 495px);
   }
-}
 
+
+}
 @media (max-width: 680px) {
+
   .hero__art {
     left: calc(50% - 412px);
   }
+
 
   .projects {
     min-height: 902px;
@@ -404,32 +398,39 @@ a {
     padding-bottom: 16px;
   }
 
+
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
 
+
   .history__list {
     margin-left: 75px;
     margin-right: 75px;
   }
-}
 
+
+}
 @media (max-width: 473px) {
+
   .hero__art {
     left: calc(50% - 341px);
     width: 1049px;
     height: 590px;
   }
 
+
   .projects {
     min-height: 696px;
   }
+
 
   .projects h1 {
     font-size: 64px;
     line-height: 0.88;
   }
+
 
   .projects__intro p {
     margin-top: 12px;
@@ -437,69 +438,69 @@ a {
     line-height: 1;
   }
 
+
   .project-grid {
     margin-top: 44px;
   }
+
 
   .history {
     height: 406px;
     padding-top: 29px;
   }
 
+
   .history h2 {
     font-size: 32px;
     line-height: 1;
   }
 
+
   .history__scroller {
     margin-top: 34px;
   }
+
 
   .history__list {
     margin-left: calc(50vw - 80px);
     margin-right: calc(50vw - 80px);
   }
 
-  .site-footer img {
-    top: 13px;
-    width: 374px;
-  }
 
-  .site-footer p {
-    right: 12px;
-    bottom: 24px;
-    left: 12px;
-    font-size: 16px;
-    text-align: center;
-  }
 }
-
 @media (max-width: 347px) {
+
   .projects {
     min-height: 590px;
     padding-top: 40px;
     padding-bottom: 16px;
   }
 
+
   .projects h1 {
     width: min(315px, 100%);
   }
+
 
   .project-grid {
     gap: 8px;
     margin-top: 44px;
   }
 
+
   .project-card__copy {
     right: 8px;
     left: 8px;
   }
-}
 
+
+}
 @media (max-width: 300px) {
+
   .hero {
     height: 559px;
   }
+
 
   .hero__art {
     left: calc(50% - 274px);
@@ -507,24 +508,31 @@ a {
     height: 523px;
   }
 
+
   .watch-button {
     top: 443px;
   }
+
 
   .projects {
     min-height: 504px;
     padding-inline: 16px;
   }
-}
 
+
+}
 @media (prefers-reduced-motion: reduce) {
+
   html {
     scroll-behavior: auto;
   }
+
 
   .watch-button,
   .project-card::after,
   .founder::after {
     transition: none;
   }
+
+
 }

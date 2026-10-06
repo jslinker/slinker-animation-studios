@@ -1,0 +1,19 @@
+[data-section-id="69b585b57e15195e494e4fb7"] .gallery-grid-wrapper {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+[data-section-id="69b585b57e15195e494e4fb7"] .gallery-grid-item-wrapper {
+  aspect-ratio: 1;
+}
+.project-marker {
+  background: #a0524e;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+@media (max-width: 767px) {
+  [data-section-id="69b585b57e15195e494e4fb7"] .gallery-grid-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.land-station-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
