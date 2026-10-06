@@ -1,4 +1,5 @@
 source "https://rubygems.org"
 
-# The site is deployed to GitHub Pages with its official Actions workflow.
-gem "jekyll", "~> 4.4"
+# Match the dependencies used by GitHub Pages' built-in Jekyll builder.
+gem "github-pages", group: :jekyll_plugins
+gem "webrick"
