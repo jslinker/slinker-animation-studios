@@ -3,13 +3,13 @@ layout: blog
 ---
 <article class="blog-article">
 <header class="blog-article__header">
-<a href="{{ '/stories-in-animation/' | relative_url }}">Stories in Animation</a>
+<p class="blog-article__meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d" }}</time><span aria-hidden="true">•</span><span>Written By <a href="{{ '/stories-in-animation/' | relative_url }}">{{ page.author }}</a></span></p>
 <h1>{{ page.title }}</h1>
-<p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> · {{ page.author }}</p>
 </header>
 <div class="blog-article__body">{{ content }}</div>
-<nav class="blog-article__navigation" aria-label="More stories">
-{% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>{% endif %}
-{% if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>{% endif %}
-</nav>
+<p class="blog-article__author"><a href="{{ '/stories-in-animation/' | relative_url }}">{{ page.author }}</a></p>
 </article>
+<nav class="blog-article__navigation" aria-label="More stories">
+{% if page.next %}<a class="blog-story-previous" href="{{ page.next.url | relative_url }}"><span>Previous</span><strong>← {{ page.next.title }}</strong></a>{% endif %}
+{% if page.previous %}<a class="blog-story-next" href="{{ page.previous.url | relative_url }}"><span>Next</span><strong>{{ page.previous.title }} →</strong></a>{% endif %}
+</nav>

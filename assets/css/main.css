@@ -536,3 +536,6 @@ a {
 
 
 }
+
+.history h2 a { color: inherit; text-decoration: none; }
+.history h2 a:focus-visible { outline: 2px solid currentColor; outline-offset: 6px; }

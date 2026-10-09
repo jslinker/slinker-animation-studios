@@ -50,8 +50,7 @@ layout: null
       </section>
 
       <section class="history" aria-labelledby="history-heading">
-        <h2 id="history-heading"><span>History of</span><span>Animation Blog</span></h2>
-        <a href="{{ '/stories-in-animation/' | relative_url }}">View all stories →</a>
+        <h2 id="history-heading"><a href="{{ '/stories-in-animation/' | relative_url }}"><span>History of</span><span>Animation Blog</span></a></h2>
         <div class="history__scroller">
           <div class="history__list">
             {% assign history_posts = site.categories['history-of-animation'] %}
