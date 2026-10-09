@@ -57,3 +57,9 @@ Squarespace player dependency.
 The Good Chord Book project lives at `/the-good-chord-book/`. Its original artwork, app icons, App Store badge, and separate homepage thumbnail are self-hosted under `assets/images/the-good-chord-book/`. It shares the local fonts and global header/footer with the other migrated projects and uses a small local script for the original scrolling background in Thousands of Combinations. App Store links, privacy terms, and artwork attribution remain intact.
 
 The Magic: The Gathering Land Station project lives at `/magic-the-gathering-land-station/`, with local images, a native MP4 final-result video, the original five-image gallery, and shared fonts/header/footer. Its new homepage card uses the rendered terrain artwork because the old homepage had no entry.
+
+## History of Animation blog
+
+The two original published stories are in `_posts/`, categorized as `history-of-animation`. Their original `/stories-in-animation/.../` URLs are retained. The homepage shows the latest four stories automatically; the archive at `/stories-in-animation/` lists every story. Shared layouts live in `_layouts/blog.html` and `_layouts/blog-post.html`, with local images/fonts and no Squarespace runtime. Each post has separate thumbnail and social sharing image fields. The RSS feed is `/stories-in-animation/feed.xml`.
+
+To add a story, create `_posts/YYYY-MM-DD-slug.html` (or Markdown) with `layout: blog-post`, title, date, author, `categories: [history-of-animation]`, image, social_image, excerpt, and permalink. Use site-relative local image paths.

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | escape }} — {{ site.title | escape }}</title>
+<meta name="description" content="{{ page.description | default: page.excerpt | strip_html | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="icon" href="{{ '/assets/images/slinker-animation-logo.png' | relative_url }}">
+<link rel="alternate" type="application/rss+xml" title="Stories in Animation" href="{{ '/stories-in-animation/feed.xml' | absolute_url }}">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ page.social_image | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ page.social_image | absolute_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/wwdc-pins/fonts.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/global-chrome.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+</head>
+<body class="blog-page">
+{% include header.html %}
+<main class="blog-main">{{ content }}</main>
+{% include footer.html %}
+</body>
+</html>

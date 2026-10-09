@@ -1,0 +1,13 @@
+---
+layout: blog
+title: Stories in Animation
+permalink: /stories-in-animation/
+social_image: /assets/images/stories-in-animation/archive-social.jpg
+description: Stories from the history of animation by Joseph Slinker.
+---
+<h1>Stories in Animation</h1>
+<div class="blog-grid">
+{% for post in site.categories['history-of-animation'] %}
+<article class="blog-card"><a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"><h2>{{ post.title }}</h2></a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time><p>{{ post.excerpt | strip_html }}</p><a href="{{ post.url | relative_url }}">Read more</a></article>
+{% endfor %}
+</div>
