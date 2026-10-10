@@ -2,14 +2,21 @@
 layout: blog
 ---
 <article class="blog-article">
+{% if page.youtube_id %}
+<div class="blog-article__video">
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id | escape }}" title="{{ page.title | escape }} — video" width="856" height="482" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+{% endif %}
 <header class="blog-article__header">
-<p class="blog-article__meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d" }}</time><span aria-hidden="true">•</span><span>Written By <a href="{{ '/stories-in-animation/' | relative_url }}">{{ page.author }}</a></span></p>
-<h1>{{ page.title }}</h1>
+<h1>{{ page.title | escape }}</h1>
 </header>
 <div class="blog-article__body">{{ content }}</div>
-<p class="blog-article__author"><a href="{{ '/stories-in-animation/' | relative_url }}">{{ page.author }}</a></p>
+<footer class="blog-article__byline">
+  <a href="{{ '/stories-in-animation/' | relative_url }}">{{ page.author | escape }}</a>
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+</footer>
 </article>
 <nav class="blog-article__navigation" aria-label="More stories">
-{% if page.next %}<a class="blog-story-previous" href="{{ page.next.url | relative_url }}"><span>Previous</span><strong>← {{ page.next.title }}</strong></a>{% endif %}
-{% if page.previous %}<a class="blog-story-next" href="{{ page.previous.url | relative_url }}"><span>Next</span><strong>{{ page.previous.title }} →</strong></a>{% endif %}
+{% if page.next %}<a class="blog-story-previous" href="{{ page.next.url | relative_url }}"><strong>← {{ page.next.title }}</strong></a>{% endif %}
+{% if page.previous %}<a class="blog-story-next" href="{{ page.previous.url | relative_url }}"><strong>{{ page.previous.title }} →</strong></a>{% endif %}
 </nav>

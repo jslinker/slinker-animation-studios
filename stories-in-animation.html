@@ -1,13 +1,42 @@
 ---
 layout: blog
-title: Stories in Animation
+title: History of Animation Blog
 permalink: /stories-in-animation/
 social_image: /assets/images/stories-in-animation/archive-social.jpg
 description: Stories from the history of animation by Joseph Slinker.
 ---
-<h1>Stories in Animation</h1>
-<div class="blog-grid">
-{% for post in site.categories['history-of-animation'] %}
-<article class="blog-card"><a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"><h2>{{ post.title }}</h2></a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time><p>{{ post.excerpt | strip_html }}</p><a href="{{ post.url | relative_url }}">Read more</a></article>
-{% endfor %}
+{% assign history_posts = site.categories['history-of-animation'] %}
+<h1 class="history-title"><span>History of</span><span>Animation Blog</span></h1>
+<div class="history-archive">
+  <nav class="history-archive__dates" aria-labelledby="previous-posts-heading">
+    <h2 id="previous-posts-heading">Previous Posts</h2>
+    {% assign post_years = history_posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+    {% for year in post_years %}
+    <div class="history-archive__year">
+      <a href="#post-{{ year.items.first.slug }}">{{ year.name }}</a>
+      <ul>
+        {% assign post_months = year.items | group_by_exp: 'post', 'post.date | date: "%B"' %}
+        {% for month in post_months %}
+        <li><a href="#post-{{ month.items.first.slug }}">{{ month.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </nav>
+  <div class="history-archive__posts">
+    {% for post in history_posts %}
+    <article class="history-story" id="post-{{ post.slug }}">
+      <a class="history-story__link" href="{{ post.url | relative_url }}">
+        <img src="{{ post.image | relative_url }}" alt="" loading="lazy" width="224" height="224">
+        <div>
+          <h2>{{ post.title | escape }}</h2>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m/%-d/%Y" }}</time>
+          <p>{{ post.excerpt | strip_html | escape }}</p>
+        </div>
+      </a>
+    </article>
+    {% else %}
+    <p>Stories coming soon.</p>
+    {% endfor %}
+  </div>
 </div>

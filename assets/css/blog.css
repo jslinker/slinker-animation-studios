@@ -18,27 +18,118 @@ body.blog-page { margin: 0; background: #e9e6df; color: #111; font-family: Almar
 .blog-article img { display: block; width: 100%; height: auto; }
 .blog-article__navigation { display: flex; justify-content: space-between; gap: 30px; margin-top: 60px; padding-top: 30px; border-top: 1px solid #999; }
 @media (max-width: 767px) { .blog-grid { grid-template-columns: 1fr; } .blog-main { padding: 110px 6vw 60px; } .blog-article__navigation { flex-direction: column; } }
-/* Article measurements from the original blog template. */
-body.blog-post-page { background: #f5f5f5; color: #121212; font-size: 16px; line-height: 1.5; }
+/* Individual post layout from Website Design.sketch. */
+@font-face {
+  font-family: "Grand Baron Distressed";
+  src: url("../fonts/grand-baron-distressed-italic.otf") format("opentype");
+  font-style: italic;
+  font-display: swap;
+}
+body.blog-post-page {
+  background: #f5f5f5;
+  color: #000;
+  font-family: "Grand Baron Distressed", Georgia, serif;
+  font-size: 32px;
+  line-height: 1.2;
+}
 .blog-post-page .site-header { background: transparent; }
-.blog-post-page .blog-main { max-width: 1500px; padding: calc(80px + 3vw) 3vw 3vw; }
-.blog-post-page .blog-article { width: 75%; max-width: none; }
-.blog-post-page .blog-article__header { margin: 0 0 50px; }
-.blog-post-page .blog-article__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 11px; margin: 0 0 32px; font-size: 16px; }
-.blog-post-page .blog-article__meta a,.blog-post-page .blog-article__author a { text-decoration: none; }
-.blog-post-page h1 { margin: 0; font-size: calc(1rem + 3.6vw); line-height: 1.2; letter-spacing: -.02em; }
-.blog-post-page .blog-article__body figure { margin: 0; padding: 17px 0; }
-.blog-post-page .blog-article__body p { margin: 0 0 16px; }
+.blog-post-page .blog-main { max-width: 1264px; padding: 69px 32px 64px; }
+.blog-post-page .blog-article { width: 100%; max-width: none; }
+.blog-article__video { max-width: 856px; margin: 0 auto 48px; aspect-ratio: 16 / 9; }
+.blog-article__video iframe { display: block; width: 100%; height: 100%; border: 0; }
+.blog-post-page .blog-article__header { margin: 0 0 8px; }
+.blog-post-page h1 {
+  margin: 0;
+  font-family: "Grand Baron Distressed", Georgia, serif;
+  font-size: 64px;
+  line-height: .984375;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.blog-post-page .blog-article__body p { margin: 0 0 24px; text-indent: 1.5em; }
 .blog-post-page .blog-article__body p:last-child { margin-bottom: 0; }
-.blog-post-page .blog-article__author { margin: 3vw 0; }
-.blog-post-page .blog-article__navigation { border: 0; margin: 3vw 0 0; padding: 3vw 0; }
+.blog-article__byline { margin-top: 48px; font-size: 24px; font-style: italic; }
+.blog-article__byline a { text-decoration: none; }
+.blog-article__byline time { display: block; }
+.blog-post-page .blog-article__navigation { border: 0; margin: 48px 0 0; padding: 0; flex-direction: row; }
 .blog-post-page .blog-article__navigation a { max-width: 45%; text-decoration: none; }
-.blog-post-page .blog-article__navigation span { display: block; }
-.blog-post-page .blog-article__navigation strong { display: block; margin-top: 10px; font-family: 'Libre Baskerville', serif; font-size: calc(1rem + 1.8vw); line-height: 1.3; font-weight: 400; }
+.blog-post-page .blog-article__navigation a:only-child { max-width: 100%; }
+.blog-post-page .blog-article__navigation strong { display: block; font-size: 20px; line-height: 1.4; font-weight: 400; }
 .blog-story-next { margin-left: auto; text-align: right; }
+.blog-post-page .site-footer { font-family: Almarai, sans-serif; }
 @media (max-width: 767px) {
-  .blog-post-page .blog-main { padding: calc(80px + 6vw) 6vw 6vw; }
-  .blog-post-page .blog-article { width: 100%; }
-  .blog-post-page .blog-article__meta { margin-bottom: 1.2rem; }
-  .blog-post-page .blog-article__navigation { flex-direction: row; }
+  body.blog-post-page { font-size: 24px; }
+  .blog-post-page .blog-main { padding: 80px 16px 48px; }
+  .blog-article__video { margin-bottom: 32px; }
+  .blog-post-page h1 { font-size: 48px; line-height: 1; }
+  .blog-post-page .blog-article__header { margin-bottom: 16px; }
+  .blog-article__byline { margin-top: 32px; font-size: 20px; }
+}
+@media (max-width: 374px) {
+  body.blog-post-page { font-size: 20px; }
+  .blog-post-page h1 { font-size: 32px; }
+  .blog-post-page .blog-article__navigation strong { font-size: 18px; }
+}
+
+/* History archive, using the same display face as the homepage. */
+@font-face {
+  font-family: "Grand Baron Distressed";
+  src: url("../fonts/grand-baron-distressed.otf") format("opentype");
+  font-display: swap;
+}
+body.blog-archive-page { background: #f5f5f5; color: #000; }
+.blog-archive-page .site-header { background: transparent; }
+.blog-archive-page .blog-main { max-width: 1440px; padding: 64px 32px; }
+.blog-archive-page .history-title {
+  margin: 0 0 44px;
+  font-family: "Grand Baron Distressed", Georgia, serif;
+  font-size: 64px;
+  line-height: .984375;
+  text-align: center;
+}
+.history-title span { display: block; }
+.history-archive {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 799px);
+  gap: 44px;
+  max-width: 1083px;
+  margin-inline: auto;
+  font-family: "Grand Baron Distressed", Georgia, serif;
+}
+.history-archive h2 { margin: 0; font: 400 32px/1.2 "Grand Baron Distressed", Georgia, serif; }
+.history-archive a { text-decoration: none; }
+.history-archive a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.history-archive__dates { font-size: 16px; line-height: 1.5; }
+.history-archive__dates h2 { margin-bottom: 16px; }
+.history-archive__dates a:hover { text-decoration: underline; }
+.history-archive__year { margin-bottom: 24px; }
+.history-archive__year ul { list-style: none; padding: 0 0 0 16px; margin: 0; }
+.history-archive__posts { display: grid; align-content: start; gap: 44px; min-width: 0; }
+.history-story { scroll-margin-top: 96px; }
+.history-story__link { display: grid; grid-template-columns: 224px minmax(0, 1fr); gap: 32px; }
+.history-story img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.history-story h2 { overflow-wrap: anywhere; }
+.history-story time { display: block; margin-top: 4px; font-size: 16px; line-height: 19px; }
+.history-story p { margin: 16px 0 0; font-size: 24px; line-height: 1.21; overflow-wrap: anywhere; }
+@media (min-width: 1600px) {
+  .history-archive { max-width: none; gap: 80px; }
+}
+@media (max-width: 1000px) {
+  .history-archive__dates { display: none; }
+  .history-archive { display: block; max-width: 799px; }
+}
+@media (max-width: 600px) {
+  .blog-archive-page .blog-main { padding-inline: 16px; }
+  .blog-archive-page .history-title { font-size: 48px; line-height: 1; margin-bottom: 32px; }
+  .history-story__link { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; }
+  .history-archive__posts { gap: 32px; }
+}
+@media (max-width: 374px) {
+  .blog-archive-page .blog-main { padding-top: 80px; }
+  .blog-archive-page .history-title { font-size: 32px; margin-bottom: 16px; }
+  .history-story__link { grid-template-columns: 40px minmax(0, 1fr); }
+  .history-story img { margin-top: 9px; }
+  .history-story h2 { font-size: 24px; }
+  .history-story p { font-size: 16px; margin-top: 8px; }
+  .history-archive__posts { gap: 16px; }
 }
