@@ -54,20 +54,23 @@ layout: null
         <div class="history__scroller">
           <div class="history__list">
             {% assign history_posts = site.categories['history-of-animation'] %}
-            {% if history_posts.size == 0 %}{% assign history_posts = site.posts %}{% endif %}
             {% if history_posts.size > 0 %}
-              {% for post in history_posts limit: 4 %}
+              {% for post in history_posts limit: 8 %}
                 <a class="post-card" href="{{ post.url | relative_url }}">
-                  <span class="post-card__image{% unless post.image %} post-card__image--placeholder{% endunless %}"{% if post.image %} style="background-image: url('{{ post.image | relative_url }}')"{% endif %}></span>
-                  <strong>{{ post.title }}</strong>
+                  {% if post.image %}
+                  <img class="post-card__image" src="{{ post.image | relative_url }}" alt="" loading="lazy" width="338" height="262">
+                  {% else %}
+                  <span class="post-card__image post-card__image--placeholder" aria-hidden="true"></span>
+                  {% endif %}
+                  <strong>{{ post.title | escape }}</strong>
                   <span class="post-card__excerpt">{{ post.excerpt | strip_html | strip_newlines }}</span>
                 </a>
               {% endfor %}
             {% else %}
-              {% for post in site.data.home.post_placeholders limit: 4 %}
+              {% for post in site.data.home.post_placeholders limit: 8 %}
                 <a class="post-card" href="{{ post.url | relative_url }}">
                   <span class="post-card__image post-card__image--placeholder"></span>
-                  <strong>{{ post.title }}</strong>
+                  <strong>{{ post.title | escape }}</strong>
                   <span class="post-card__excerpt">{{ post.excerpt }}</span>
                 </a>
               {% endfor %}
