@@ -11,3 +11,6 @@ exclude:
 collections:
   projects:
     output: true
+
+url: "https://slinkeranimation.com"
+baseurl: ""
